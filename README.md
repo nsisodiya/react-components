@@ -1,2 +1,7 @@
 # sample-react-component-lib
-WIP - Simple React Component creation workflow
+How to build this repo
+
+```
+npm install
+npm run server
+```

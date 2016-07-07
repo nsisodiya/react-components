@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("react-bootstrap"), require("uuid"));
+		module.exports = factory(require("react-css-modules"), require("react"), require("react-bootstrap"), require("uuid"));
 	else if(typeof define === 'function' && define.amd)
-		define(["React", "ReactBootstrap", "UUID"], factory);
+		define(["ReactCSSModules", "React", "ReactBootstrap", "UUID"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactComponents"] = factory(require("react"), require("react-bootstrap"), require("uuid"));
+		exports["ReactComponents"] = factory(require("react-css-modules"), require("react"), require("react-bootstrap"), require("uuid"));
 	else
-		root["ReactComponents"] = factory(root["React"], root["ReactBootstrap"], root["UUID"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__) {
+		root["ReactComponents"] = factory(root["ReactCSSModules"], root["React"], root["ReactBootstrap"], root["UUID"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -68,7 +68,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 1 */,
-/* 2 */,
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+/***/ },
 /* 3 */,
 /* 4 */,
 /* 5 */
@@ -138,6 +143,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _util2 = _interopRequireDefault(_util);
 	
+	var _Icon = __webpack_require__(11);
+	
+	var _Icon2 = _interopRequireDefault(_Icon);
+	
+	var _reactCssModules = __webpack_require__(2);
+	
+	var _reactCssModules2 = _interopRequireDefault(_reactCssModules);
+	
 	var _reactBootstrap = __webpack_require__(9);
 	
 	var _uuid = __webpack_require__(10);
@@ -195,7 +208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	
-	exports.default = Icon;
+	exports.default = (0, _reactCssModules2.default)(Icon, _Icon2.default);
 
 /***/ },
 /* 9 */
@@ -208,6 +221,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_10__;
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"container":"RC_Icon__container"};
 
 /***/ }
 /******/ ])

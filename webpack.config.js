@@ -17,14 +17,6 @@ module.exports = [{
     libraryTarget: "umd",
     library: "[name]"
   },
-  eslint: {
-    //fix: true,
-    failOnWarning: false,
-    failOnError: false,
-    emitError: true,
-    configFile: "./node_modules/@hotelsoft/common/.eslintrc",
-    formatter: require("eslint/lib/formatters/stylish")
-  },
   plugins: [
     new ExtractTextPlugin("ReactComponents.css", {
       allChunks: true
@@ -37,17 +29,11 @@ module.exports = [{
       {from: "demo/index.html"}])
   ],
   externals: {
-    "@hotelsoft/react-components": {
-      commonjs: "@hotelsoft/react-components",
-      commonjs2: "@hotelsoft/react-components",
+    "@nsisodiya/react-components": {
+      commonjs: "@nsisodiya/react-components",
+      commonjs2: "@nsisodiya/react-components",
       amd: "ReactComponents",
       root: "ReactComponents"
-    },
-    "@nsisodiya/flux": {
-      commonjs: "@nsisodiya/flux",
-      commonjs2: "@nsisodiya/flux",
-      amd: "ReactFlux",
-      root: "ReactFlux"
     },
     "react": {
       commonjs: "react",
@@ -61,89 +47,17 @@ module.exports = [{
       amd: "ReactDOM",
       root: "ReactDOM"
     },
-    "@hotelsoft/utils": {
-      commonjs: "@hotelsoft/utils",
-      commonjs2: "@hotelsoft/utils",
-      amd: "HotelsoftUtils",
-      root: "HotelsoftUtils"
-    },
     "react-css-modules": {
       commonjs: "react-css-modules",
       commonjs2: "react-css-modules",
       amd: "ReactCSSModules",
       root: "ReactCSSModules"
     },
-    "lang-engine": {
-      commonjs: "lang-engine",
-      commonjs2: "lang-engine",
-      amd: "langEngine",
-      root: "langEngine"
-    },
     "react-bootstrap": {
       commonjs: "react-bootstrap",
       commonjs2: "react-bootstrap",
       amd: "ReactBootstrap",
       root: "ReactBootstrap"
-    },
-    "screenfull": {
-      commonjs: "screenfull",
-      commonjs2: "screenfull",
-      amd: "screenfull",
-      root: "screenfull"
-    },
-    "moment": {
-      commonjs: "moment",
-      commonjs2: "moment",
-      amd: "moment",
-      root: "moment"
-    },
-    "@nsisodiya/es6-mixins": {
-      commonjs: "@nsisodiya/es6-mixins",
-      commonjs2: "@nsisodiya/es6-mixins",
-      amd: "ES6Mixins",
-      root: "ES6Mixins"
-    },
-    "react-datepicker": {
-      commonjs: "react-datepicker",
-      commonjs2: "react-datepicker",
-      amd: "DatePicker",
-      root: "DatePicker"
-    },
-    draggabilly: {
-      commonjs: "draggabilly",
-      commonjs2: "draggabilly",
-      amd: "Draggabilly",
-      root: "Draggabilly"
-    },
-    "react-json-viewer": {
-      commonjs: "react-json-viewer",
-      commonjs2: "react-json-viewer",
-      amd: "ReactJsonViewer",
-      root: "ReactJsonViewer"
-    },
-    "react-syntax-highlight": {
-      commonjs: "react-syntax-highlight",
-      commonjs2: "react-syntax-highlight",
-      amd: "ReactSyntaxHighlight",
-      root: "ReactSyntaxHighlight"
-    },
-    "jquery": {
-      commonjs: "jquery",
-      commonjs2: "jquery",
-      amd: "JQuery",
-      root: "JQuery"
-    },
-    "react-select2-wrapper": {
-      commonjs: "react-select2-wrapper",
-      commonjs2: "react-select2-wrapper",
-      amd: "ReactSelect2Wrapper",
-      root: "ReactSelect2Wrapper"
-    },
-    "react-c3js": {
-      commonjs: "react-c3js",
-      commonjs2: "react-c3js",
-      amd: "ReactC3js",
-      root: "ReactC3js"
     },
     "uuid": {
       commonjs: "uuid",
@@ -153,13 +67,7 @@ module.exports = [{
     }
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loader: "eslint",
-        exclude: /node_modules/
-      }
-    ],
+    preLoaders: [],
     loaders: [
       {
         test: /\.js$/,

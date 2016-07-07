@@ -1,90 +1,17 @@
 import styles from "./Demo.css";
 import cssModules from "react-css-modules";
-import TableDemo from "./TableDemo/TableDemo";
 import IconDemo from "./IconDemo/IconDemo";
-import LoaderDemo from "./LoaderDemo/LoaderDemo";
-import HotelsoftLogo from "./HotelsoftLogo/HotelsoftLogo";
-import BreadCrumbDemo from "./BreadCrumbDemo/BreadCrumbDemo";
-import CenterDemo from "./CenterDemo/CenterDemo";
-import LangDemo from "./LangDemo/LangDemo";
-import PageDemo from "./PageDemo/PageDemo";
-import FullScreenButtonDemo from "./FullScreenButtonDemo/FullScreenButtonDemo";
-import WidgetDemo from "./WidgetDemo/WidgetDemo";
-import FlagDemo from "./FlagDemo/FlagDemo";
-import MenuDropDownDemo from "./MenuDropDownDemo/MenuDropDownDemo";
-import LanguageDropDownDemo from "./LanguageDropDownDemo/LanguageDropDownDemo";
-import PropertyDropDownDemo from "./PropertyDropDownDemo/PropertyDropDownDemo";
-import FormLevelDateDemo from "./FormLevelDateDemo/FormLevelDateDemo";
-import ApiLoaderDemo from "./ApiLoaderDemo/ApiLoaderDemo";
-import StoreLoaderDemo from "./StoreLoaderDemo/StoreLoaderDemo";
-import FormLevelSelectDemo from "./FormLevelSelectDemo/FormLevelSelectDemo";
-import PrevNextNavigationDemo from "./PrevNextNavigationDemo/PrevNextNavigationDemo";
-import LeftNavMenuDemo from "./LeftNavMenuDemo/LeftNavMenuDemo";
-import FloatLeftDemo from "./FloatLeftDemo/FloatLeftDemo";
-import FloatRightDemo from "./FloatRightDemo/FloatRightDemo";
-import BandChartDemo from "./BandChartDemo/BandChartDemo";
-import FormLevelInputDemo from "./FormLevelInputDemo/FormLevelInputDemo";
-import FormLevelSliderDemo from "./FormLevelSliderDemo/FormLevelSliderDemo";
-import SpinLoaderDemo from "./SpinLoaderDemo/SpinLoaderDemo";
-import TabsDemo from "./TabsDemo/TabsDemo";
-import RadioButtonDemo from "./RadioButtonDemo/RadioButtonDemo";
-import LinkWithTooltipDemo from "./LinkWithTooltipDemo/LinkWithTooltipDemo";
-import FormLevelRadioGroupDemo from "./FormLevelRadioGroupDemo/FormLevelRadioGroupDemo";
-import CheckboxDemo from "./CheckboxDemo/CheckboxDemo";
-import FormLevelCheckBoxDemo from "./FormLevelCheckBoxDemo/FormLevelCheckBoxDemo";
-import FormLevelMultiSelectDemo from "./FormLevelMultiSelectDemo/FormLevelMultiSelectDemo";
-import DragDemo from "./DragDemo/DragDemo";
-import util from "@hotelsoft/utils";
+import util from "../src/util";
 import React, {Component} from "react";
 import ReactDom from "react-dom";
-import {StateViewerPopup} from "@hotelsoft/react-components";
 
 class Demo extends Component {
   constructor(props, context) {
     super(props, context);
     this.demoConfig = {
-      "Simple Form Component": {
-        CheckBox: <CheckboxDemo/>,
-        RadioButton: <RadioButtonDemo/>
-      },
-      "Form Level Components": {
-        FormLevelInput: <FormLevelInputDemo/>,
-        FormLevelDate: <FormLevelDateDemo/>,
-        FormLevelSelect: <FormLevelSelectDemo/>,
-        FormLevelCheckBox: <FormLevelCheckBoxDemo/>,
-        FormLevelRadioGroup: <FormLevelRadioGroupDemo />,
-        FormLevelSlider: <FormLevelSliderDemo/>,
-        FormLevelMultiSelect: <FormLevelMultiSelectDemo/>
-      },
-      MenuDropDown: <MenuDropDownDemo />,
-      Tabs: <TabsDemo/>,
-      Table: <TableDemo/>,
-      ApiLoader: <ApiLoaderDemo/>,
-      StoreLoader: <StoreLoaderDemo/>,
-      Loader: {
-        Loader: <LoaderDemo />,
-        SpinLoader: <SpinLoaderDemo />
-      },
-      Icon: <IconDemo/>,
-      HotelsoftLogo: <HotelsoftLogo/>,
-      BreadCrumb: <BreadCrumbDemo/>,
-      "CSS Level": {
-        Drag: <DragDemo/>,
-        Center: <CenterDemo/>,
-        FloatLeft: <FloatLeftDemo/>,
-        FloatRight: <FloatRightDemo/>,
-        LinkWithTooltip: <LinkWithTooltipDemo />
-      },
-      Page: <PageDemo/>,
-      FullScreenButton: <FullScreenButtonDemo/>,
-      Widget: <WidgetDemo/>,
-      Flag: <FlagDemo/>,
-      LanguageDropDown: <LanguageDropDownDemo/>,
-      LeftNavMenu: <LeftNavMenuDemo/>,
-      PrevNextNavigation: <PrevNextNavigationDemo/>,
-      Lang: <LangDemo/>,
-      PropertyDropDown: <PropertyDropDownDemo/>,
-      BandChart: <BandChartDemo/>
+      "Simple Component": {
+        Icon: <IconDemo/>
+      }
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.counter = 0;
@@ -104,7 +31,6 @@ class Demo extends Component {
 
   renderDemoConfig() {
     return <div className="row">
-      <StateViewerPopup/>
       <nav className="col-xs-3 bs-docs-sidebar">
         <ul id="sidebar" className="nav nav-stacked fixed">
           {

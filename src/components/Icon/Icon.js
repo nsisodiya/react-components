@@ -1,5 +1,8 @@
 import React from "react";
-import util from "@hotelsoft/utils";
+import util from "../../util";
+import styles from "./Icon.css";
+import cssModules from "react-css-modules";
+
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import uuid from "uuid";
 
@@ -47,4 +50,4 @@ Icon.defaultProps = {
   }
 };
 
-export default Icon;
+export default cssModules(Icon, styles);

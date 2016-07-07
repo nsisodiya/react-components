@@ -1,10 +1,10 @@
-import {Icon, PropTypesTable} from "@hotelsoft/react-components";
-import Highlight from "react-syntax-highlight";
+import {Icon} from "@nsisodiya/react-components";
 
 export default function () {
   return <span>
-           <Highlight lang={'html'} value={'<Icon icon="plus"/>'}/>
-           <Icon icon="plus"/>
-           <PropTypesTable comp={Icon} />
-         </span>;
+    <h2>Icon component with Tooltip</h2>
+    <Icon tooltip="This is a Tooptip" icon="plus"/>
+    <h2>Icon with Spin</h2>
+    <Icon spin icon="plus"/>
+  </span>;
 }
