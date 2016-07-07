@@ -1,4 +1,5 @@
 import {Icon} from "@nsisodiya/react-components";
+import React from "react";
 
 export default function () {
   return <span>
