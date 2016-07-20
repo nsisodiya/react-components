@@ -30,9 +30,9 @@ module.exports = [{
       {from: "index.html"}])
   ],
 
-  resolve: {
-    alias: {"@nsisodiya/react-components": RCRepoDir}
-  },
+//  resolve: {
+//    alias: {"@nsisodiya/react-components": RCRepoDir}
+//  },
 
   module: {
     loaders: [
@@ -44,11 +44,6 @@ module.exports = [{
           plugins: ["transform-object-rest-spread"]
         }
       },
-      // { test: require.resolve("react"), loader: "expose?React" },
-      // { test: require.resolve("react-dom"), loader: "expose?ReactDOM" },
-      // { test: require.resolve("uuid"), loader: "expose?UUID" },
-      // { test: require.resolve("react-bootstrap"), loader: "expose?ReactBootstrap" },
-      // { test: require.resolve("react-css-modules"), loader: "expose?ReactCSSModules" },
       {
         test: /\.css$/,
         include: [/node_modules/],
