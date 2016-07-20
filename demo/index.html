@@ -2,13 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
-	<link rel="stylesheet" href="./External.css">
-	<link rel="stylesheet" href="./ReactComponents.css">
-
-	<script src="./External.js"></script>
-	<script src="./ReactComponents.js"></script>
-	<script src="./DemoComponent.js"></script>
+	<link rel="stylesheet" href="./Load.css">
 	<script src="http://localhost:36001/livereload.js"></script>
 	<style>
 		#content {
@@ -95,17 +89,7 @@
 </head>
 <body>
 <div id="content"></div>
-<script>
-	var AllComponents = window.ReactComponents;
-	window.HotelsoftReactComponentsFirstRun = function () {
-		var comp = window.DemoComponent.default;
-		if (comp !== undefined) {
-			ReactDOM.render(React.createElement(comp, null), document.getElementById("content"));
-		} else {
-			console.error(`Unable to find DemoComponent Component`);
-		}
-	};
-	window.HotelsoftReactComponentsFirstRun();
-</script>
+<script src="./Load.js"></script>
+
 </body>
 </html>

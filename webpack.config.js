@@ -2,13 +2,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var LiveReloadPlugin = require("webpack-livereload-plugin");
 var CleanWebpackPlugin = require("clean-webpack-plugin");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
-
+console.log(__dirname);
 module.exports = [{
   cache: true,
   devtool: "source-map",
   entry: {
-    "ReactComponents": "./src/index.js",
-    "DemoComponent": "./demo/Demo.js"
+    "ReactComponents": "./src/index.js"
   },
   babelrc: false,
   output: {
@@ -29,12 +28,6 @@ module.exports = [{
       {from: "demo/index.html"}])
   ],
   externals: {
-    "@nsisodiya/react-components": {
-      commonjs: "@nsisodiya/react-components",
-      commonjs2: "@nsisodiya/react-components",
-      amd: "ReactComponents",
-      root: "ReactComponents"
-    },
     "react": {
       commonjs: "react",
       commonjs2: "react",
@@ -113,38 +106,57 @@ module.exports = [{
   cache: true,
   devtool: "source-map",
   entry: {
-    "External": "./demo/external.js"
+    "Load": "./demo/Load.js"
   },
   babelrc: false,
   output: {
-    path: "dist",
+    path: "demo-dist",
     filename: "[name].js",
     libraryTarget: "umd",
     library: "[name]"
   },
   plugins: [
-    new ExtractTextPlugin("External.css", {
+    new ExtractTextPlugin("Load.css", {
       allChunks: true
     }),
-    new CleanWebpackPlugin(["dist"], {
-      //root: "",
-      verbose: true,
-      dry: false
-    })
+    // new CleanWebpackPlugin(["dist"], {
+    //   //root: "",
+    //   verbose: true,
+    //   dry: false
+    // })
   ],
+
+  // resolve: {
+  //     alias: {"@nsisodiya/react-components": __dirname }
+  // },
+
   module: {
     loaders: [
       {
         test: /\.js$/,
         loader: "babel",
         query: {
-          presets: ["es2015"]
+          presets: ["es2015", "react"],
+          plugins: ["transform-object-rest-spread"]
         }
-      }, {
+      },
+      // { test: require.resolve("react"), loader: "expose?React" },
+      // { test: require.resolve("react-dom"), loader: "expose?ReactDOM" },
+      // { test: require.resolve("uuid"), loader: "expose?UUID" },
+      // { test: require.resolve("react-bootstrap"), loader: "expose?ReactBootstrap" },
+      // { test: require.resolve("react-css-modules"), loader: "expose?ReactCSSModules" },
+      {
         test: /\.css$/,
         include: [/node_modules/],
-        loader: ExtractTextPlugin.extract("style", "css")
-      }, {
+        loaders: ["style", "css"]
+      },
+      {
+        test: /\.css$/,
+        exclude: [/node_modules/],
+        loader: ExtractTextPlugin.extract("style",
+          "css?modules&importLoaders=1&localIdentName=RCDemo_[name]__[local]")
+      },
+      {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url?limit=1000000&mimetype=application/font-woff"
       }, {

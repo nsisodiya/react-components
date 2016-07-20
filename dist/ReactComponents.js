@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react-css-modules"), require("react"), require("react-bootstrap"), require("uuid"));
+		module.exports = factory(require("react"), require("react-css-modules"), require("react-bootstrap"), require("uuid"));
 	else if(typeof define === 'function' && define.amd)
-		define(["ReactCSSModules", "React", "ReactBootstrap", "UUID"], factory);
+		define(["React", "ReactCSSModules", "ReactBootstrap", "UUID"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactComponents"] = factory(require("react-css-modules"), require("react"), require("react-bootstrap"), require("uuid"));
+		exports["ReactComponents"] = factory(require("react"), require("react-css-modules"), require("react-bootstrap"), require("uuid"));
 	else
-		root["ReactComponents"] = factory(root["ReactCSSModules"], root["React"], root["ReactBootstrap"], root["UUID"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__) {
+		root["ReactComponents"] = factory(root["React"], root["ReactCSSModules"], root["ReactBootstrap"], root["UUID"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -56,7 +56,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
-	var _Icon = __webpack_require__(8);
+	var _Icon = __webpack_require__(1);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -67,66 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 1 */,
-/* 2 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ },
-/* 3 */,
-/* 4 */,
-/* 5 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	/**
-	 * Created by narendrasisodiya on 11/03/16.
-	 */
-	
-	module.exports = {
-	  clone: function clone(obj) {
-	    return JSON.parse(JSON.stringify(obj));
-	  },
-	  iff: function iff(condition, trueRet, falseRet) {
-	    if (condition === true) {
-	      return trueRet;
-	    } else {
-	      return falseRet;
-	    }
-	  },
-	  if_: function if_(condition, trueRet, falseRet) {
-	    if (condition === true) {
-	      if (typeof trueRet === "function") {
-	        return trueRet();
-	      }
-	      return trueRet;
-	    } else {
-	      if (typeof falseRet === "function") {
-	        return falseRet();
-	      }
-	      return falseRet;
-	    }
-	  },
-	  mapObject: function mapObject(obj, cb) {
-	    var a = [];
-	    Object.keys(obj).map(function (key) {
-	      a.push(cb(obj[key], key));
-	    });
-	    return a;
-	  }
-	};
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
-
-/***/ },
-/* 7 */,
-/* 8 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -135,25 +76,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _react = __webpack_require__(6);
+	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _util = __webpack_require__(5);
+	var _util = __webpack_require__(3);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
-	var _Icon = __webpack_require__(11);
+	var _Icon = __webpack_require__(4);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
-	var _reactCssModules = __webpack_require__(2);
+	var _reactCssModules = __webpack_require__(5);
 	
 	var _reactCssModules2 = _interopRequireDefault(_reactCssModules);
 	
-	var _reactBootstrap = __webpack_require__(9);
+	var _reactBootstrap = __webpack_require__(6);
 	
-	var _uuid = __webpack_require__(10);
+	var _uuid = __webpack_require__(7);
 	
 	var _uuid2 = _interopRequireDefault(_uuid);
 	
@@ -211,23 +152,78 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = (0, _reactCssModules2.default)(Icon, _Icon2.default);
 
 /***/ },
-/* 9 */
+/* 2 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ },
-/* 10 */
+/* 3 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_10__;
+	"use strict";
+	
+	/**
+	 * Created by narendrasisodiya on 11/03/16.
+	 */
+	
+	module.exports = {
+	  clone: function clone(obj) {
+	    return JSON.parse(JSON.stringify(obj));
+	  },
+	  iff: function iff(condition, trueRet, falseRet) {
+	    if (condition === true) {
+	      return trueRet;
+	    } else {
+	      return falseRet;
+	    }
+	  },
+	  if_: function if_(condition, trueRet, falseRet) {
+	    if (condition === true) {
+	      if (typeof trueRet === "function") {
+	        return trueRet();
+	      }
+	      return trueRet;
+	    } else {
+	      if (typeof falseRet === "function") {
+	        return falseRet();
+	      }
+	      return falseRet;
+	    }
+	  },
+	  mapObject: function mapObject(obj, cb) {
+	    var a = [];
+	    Object.keys(obj).map(function (key) {
+	      a.push(cb(obj[key], key));
+	    });
+	    return a;
+	  }
+	};
 
 /***/ },
-/* 11 */
+/* 4 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"container":"RC_Icon__container"};
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 
 /***/ }
 /******/ ])

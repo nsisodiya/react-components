@@ -1,7 +1,7 @@
 import styles from "./Demo.css";
 import cssModules from "react-css-modules";
-import IconDemo from "./IconDemo/IconDemo";
-import util from "../src/util";
+import IconDemo from "../IconDemo/IconDemo";
+import util from "../../util";
 import React, {Component} from "react";
 import ReactDom from "react-dom";
 
@@ -127,4 +127,6 @@ class Demo extends Component {
     </div>;
   }
 }
+
+
 export default cssModules(Demo, styles);
