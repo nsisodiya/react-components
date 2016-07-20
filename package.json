@@ -18,7 +18,9 @@
   },
   "files": [
     "dist/ReactComponents.css",
-    "dist/ReactComponents.js"
+    "dist/ReactComponents.css.map",
+    "dist/ReactComponents.js",
+    "dist/ReactComponents.js.map"
   ],
   "repository": {
     "type": "git",
