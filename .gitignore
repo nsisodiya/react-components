@@ -47,3 +47,4 @@ node_modules
 .idea
 
 .DS_Store
+demo/demo-dist/
