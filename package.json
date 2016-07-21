@@ -63,12 +63,12 @@
     "webpack-livereload-plugin": "0.8.1"
   },
   "peerDependencies": {
-    "bootstrap": ">3.3.6",
-    "font-awesome": ">4.6.3",
-    "react": ">15.2.0",
-    "react-css-modules": ">3.7.7",
-    "react-dom": ">15.2.0",
-    "react-bootstrap": ">0.29.5",
-    "uuid": ">2.0.2"
+    "bootstrap": ">=3.3.6",
+    "font-awesome": ">=4.6.3",
+    "react": ">=15.2.0",
+    "react-css-modules": ">=3.7.7",
+    "react-dom": ">=15.2.0",
+    "react-bootstrap": ">=0.29.5",
+    "uuid": ">=2.0.2"
   }
 }

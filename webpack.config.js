@@ -46,8 +46,8 @@ module.exports = [{
     "react-bootstrap": {
       commonjs: "react-bootstrap",
       commonjs2: "react-bootstrap",
-      amd: "ReactBootstrap",
-      root: "ReactBootstrap"
+      amd: "react-bootstrap",
+      root: "react-bootstrap"
     },
     "uuid": {
       commonjs: "uuid",
