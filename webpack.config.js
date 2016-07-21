@@ -11,7 +11,7 @@ module.exports = [{
   },
   babelrc: false,
   output: {
-    path: "dist",
+    path: "./demo/node_modules/@nsisodiya/react-components/dist",
     filename: "[name].js",
     libraryTarget: "umd",
     library: "[name]"
@@ -40,8 +40,8 @@ module.exports = [{
     "react-css-modules": {
       commonjs: "react-css-modules",
       commonjs2: "react-css-modules",
-      amd: "ReactCSSModules",
-      root: "ReactCSSModules"
+      amd: "react-css-modules",
+      root: "react-css-modules"
     },
     "react-bootstrap": {
       commonjs: "react-bootstrap",
