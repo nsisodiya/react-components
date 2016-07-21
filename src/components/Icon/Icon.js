@@ -2,7 +2,6 @@ import React from "react";
 import util from "../../util";
 import styles from "./Icon.css";
 import cssModules from "react-css-modules";
-
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import uuid from "uuid";
 
@@ -14,7 +13,7 @@ var Icon = function (props) {
   var mainContent = <i
     style={style}
     onClick={props.onClick}
-    className={`fa fa-fw fa-${props.icon} fa-${props.size} ${util.iff(props.spin, " fa-spin", "")}
+    className={`fa bn fa-fw fa-${props.icon} fa-${props.size} ${util.iff(props.spin, " fa-spin", "")}
       ${util.iff(props.className === undefined, "", props.className)}`}></i>;
 
   if (props.tooltip !== "") {
@@ -22,7 +21,7 @@ var Icon = function (props) {
       {mainContent}
     </OverlayTrigger>;
   } else {
-    return mainContent;
+    return <p>Hello World!</p>;
   }
 };
 

@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"), require("react-css-modules"), require("react-bootstrap"), require("uuid"));
 	else if(typeof define === 'function' && define.amd)
-		define(["React", "ReactCSSModules", "ReactBootstrap", "UUID"], factory);
+		define(["React", "react-css-modules", "react-bootstrap", "UUID"], factory);
 	else if(typeof exports === 'object')
 		exports["ReactComponents"] = factory(require("react"), require("react-css-modules"), require("react-bootstrap"), require("uuid"));
 	else
-		root["ReactComponents"] = factory(root["React"], root["ReactCSSModules"], root["ReactBootstrap"], root["UUID"]);
+		root["ReactComponents"] = factory(root["React"], root["react-css-modules"], root["react-bootstrap"], root["UUID"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -108,7 +108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var mainContent = _react2.default.createElement("i", {
 	    style: style,
 	    onClick: props.onClick,
-	    className: "fa fa-fw fa-" + props.icon + " fa-" + props.size + " " + _util2.default.iff(props.spin, " fa-spin", "") + "\n      " + _util2.default.iff(props.className === undefined, "", props.className) });
+	    className: "fa bn fa-fw fa-" + props.icon + " fa-" + props.size + " " + _util2.default.iff(props.spin, " fa-spin", "") + "\n      " + _util2.default.iff(props.className === undefined, "", props.className) });
 	
 	  if (props.tooltip !== "") {
 	    return _react2.default.createElement(
@@ -121,7 +121,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      mainContent
 	    );
 	  } else {
-	    return mainContent;
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "Hello World!"
+	    );
 	  }
 	};
 	

@@ -2,7 +2,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var LiveReloadPlugin = require("webpack-livereload-plugin");
 var CleanWebpackPlugin = require("clean-webpack-plugin");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
-console.log(__dirname);
+
 module.exports = [{
   cache: true,
   devtool: "source-map",
@@ -11,7 +11,7 @@ module.exports = [{
   },
   babelrc: false,
   output: {
-    path: "./demo/node_modules/@nsisodiya/react-components/dist",
+    path: "dist",
     filename: "[name].js",
     libraryTarget: "umd",
     library: "[name]"
