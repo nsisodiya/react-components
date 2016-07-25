@@ -13,7 +13,7 @@ var Icon = function (props) {
   var mainContent = <i
     style={style}
     onClick={props.onClick}
-    className={`fa bn fa-fw fa-${props.icon} fa-${props.size} ${util.iff(props.spin, " fa-spin", "")}
+    className={`fa fa-fw fa-${props.icon} fa-${props.size} ${util.iff(props.spin, " fa-spin", "")}
       ${util.iff(props.className === undefined, "", props.className)}`}></i>;
 
   if (props.tooltip !== "") {
@@ -21,7 +21,7 @@ var Icon = function (props) {
       {mainContent}
     </OverlayTrigger>;
   } else {
-    return <p>Hello World!</p>;
+    return mainContent;
   }
 };
 

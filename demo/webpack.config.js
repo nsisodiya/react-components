@@ -3,8 +3,6 @@ var LiveReloadPlugin = require("webpack-livereload-plugin");
 var CleanWebpackPlugin = require("clean-webpack-plugin");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
 
-var RCRepoDir = __dirname + "/../";
-console.log("RCRepoDir", RCRepoDir);
 module.exports = [{
   cache: true,
   devtool: "inline-source-map",

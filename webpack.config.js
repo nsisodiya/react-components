@@ -28,14 +28,14 @@ module.exports = [{
     "react": {
       commonjs: "react",
       commonjs2: "react",
-      amd: "React",
-      root: "React"
+      amd: "react",
+      root: "react"
     },
     "react-dom": {
       commonjs: "react-dom",
       commonjs2: "react-dom",
-      amd: "ReactDOM",
-      root: "ReactDOM"
+      amd: "react-dom",
+      root: "react-dom"
     },
     "react-css-modules": {
       commonjs: "react-css-modules",
@@ -52,8 +52,8 @@ module.exports = [{
     "uuid": {
       commonjs: "uuid",
       commonjs2: "uuid",
-      amd: "UUID",
-      root: "UUID"
+      amd: "uuid",
+      root: "uuid"
     }
   },
   module: {
